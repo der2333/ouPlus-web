@@ -1,7 +1,13 @@
 import * as React from "react";
 import { NavLink } from "react-router";
 import { Button } from "@/components/ui/button";
-import { Book, CheckCircle, HelpCircle, LayoutDashboard } from "lucide-react";
+import {
+  Book,
+  CheckCircle,
+  ChevronRightIcon,
+  HelpCircle,
+  LayoutDashboard,
+} from "lucide-react";
 
 type Feature = {
   id: string;
@@ -22,7 +28,7 @@ const features: Feature[] = [
   {
     id: "graduation",
     title: "毕业条件自查",
-    description: "毕业前检查学生是否",
+    description: "毕业前检查学生是否符合毕业条件。",
     to: "/graduation",
     Icon: CheckCircle,
   },
@@ -45,7 +51,7 @@ const features: Feature[] = [
 function FeatureCard({ feature }: { feature: Feature }) {
   const Icon = feature.Icon;
   return (
-    <div className="group bg-card border rounded-lg p-6 shadow-sm hover:shadow-md transition-colors duration-150">
+    <div className="group bg-card border rounded-lg p-6 shadow-sm transition-colors duration-150">
       <div className="flex items-start gap-4">
         <div className="rounded-md bg-muted/60 p-2">
           <Icon className="h-6 w-6 text-foreground" />
@@ -58,8 +64,10 @@ function FeatureCard({ feature }: { feature: Feature }) {
         </div>
       </div>
       <div className="mt-4 flex justify-end">
-        <Button asChild variant="ghost" size="sm">
-          <NavLink to={feature.to}>前往</NavLink>
+        <Button asChild variant="secondary" size="icon" className="size-8">
+          <NavLink to={feature.to}>
+            <ChevronRightIcon />
+          </NavLink>
         </Button>
       </div>
     </div>
@@ -77,16 +85,16 @@ function App() {
           </div>
 
           <nav className="flex items-center gap-2">
-            <Button asChild variant="ghost" size="sm">
+            <Button asChild variant="ghost" size="sm" className="text-base">
               <NavLink to="/">首页</NavLink>
             </Button>
-            <Button asChild variant="ghost" size="sm">
+            <Button asChild variant="ghost" size="sm" className="text-base">
               <NavLink to="/course">生成选课表</NavLink>
             </Button>
-            <Button asChild variant="ghost" size="sm">
+            <Button asChild variant="ghost" size="sm" className="text-base">
               <NavLink to="/graduation">毕业审核</NavLink>
             </Button>
-            <Button asChild variant="ghost" size="sm">
+            <Button asChild variant="ghost" size="sm" className="text-base">
               <NavLink to="/help">帮助</NavLink>
             </Button>
           </nav>
