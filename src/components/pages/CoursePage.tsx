@@ -2,6 +2,7 @@ import * as React from "react";
 import { NavLink } from "react-router";
 import { Button } from "../ui/button";
 import { LayoutDashboard } from "lucide-react";
+import courseSheet from "@/lib/course-sheet";
 
 function CoursePage() {
   const inputRef = React.useRef<HTMLInputElement | null>(null);
@@ -49,6 +50,7 @@ function CoursePage() {
       return;
     }
     // 生成选课表
+    courseSheet(file);
   };
 
   return (
