@@ -1,7 +1,7 @@
 import * as React from "react";
 import { NavLink } from "react-router";
 import { Button } from "../ui/button";
-import { LayoutDashboard } from "lucide-react";
+import { LayoutDashboard, Trash2Icon } from "lucide-react";
 import courseSheet from "@/lib/course-sheet";
 
 function CoursePage() {
@@ -127,9 +127,10 @@ function CoursePage() {
                       <Button
                         onClick={handleClear}
                         variant="destructive"
-                        size="sm"
+                        size="icon"
+                        className="size-8"
                       >
-                        清除
+                        <Trash2Icon />
                       </Button>
                     </div>
                   </div>
