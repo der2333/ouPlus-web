@@ -121,6 +121,7 @@ function CoursePage() {
                         onClick={() => inputRef.current?.click()}
                         variant="secondary"
                         size="sm"
+                        className="cursor-pointer"
                       >
                         选择文件
                       </Button>
@@ -128,7 +129,7 @@ function CoursePage() {
                         onClick={handleClear}
                         variant="destructive"
                         size="icon"
-                        className="size-8"
+                        className="size-8 cursor-pointer"
                       >
                         <Trash2Icon />
                       </Button>
@@ -144,6 +145,7 @@ function CoursePage() {
                       onClick={handleProcess}
                       variant="outline"
                       size="sm"
+                      className="cursor-pointer"
                     >
                       开始解析
                     </Button>
