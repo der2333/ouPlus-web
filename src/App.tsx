@@ -20,7 +20,7 @@ type Feature = {
 const features: Feature[] = [
   {
     id: "course",
-    title: "生成选课表",
+    title: "选课名单生成",
     description: "自动生成可导入一平台的选课表。",
     to: "/course",
     Icon: Book,
