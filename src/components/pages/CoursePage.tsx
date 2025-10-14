@@ -70,7 +70,7 @@ function CoursePage() {
               <NavLink to="/course">生成选课表</NavLink>
             </Button>
             <Button asChild variant="ghost" size="sm" className="text-base">
-              <NavLink to="/graduation">毕业审核</NavLink>
+              <NavLink to="/CourseVerify">选课报考校验</NavLink>
             </Button>
             <Button asChild variant="ghost" size="sm" className="text-base">
               <NavLink to="/help">帮助</NavLink>

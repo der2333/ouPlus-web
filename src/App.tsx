@@ -27,9 +27,9 @@ const features: Feature[] = [
   },
   {
     id: "graduation",
-    title: "毕业条件自查",
-    description: "毕业前检查学生是否符合毕业条件。",
-    to: "/graduation",
+    title: "选课报考校验",
+    description: "对选课、报考数据进行校验，找出没有成功报考的课程。",
+    to: "/CourseVerify",
     Icon: CheckCircle,
   },
   // {
@@ -92,7 +92,7 @@ function App() {
               <NavLink to="/course">生成选课表</NavLink>
             </Button>
             <Button asChild variant="ghost" size="sm" className="text-base">
-              <NavLink to="/graduation">毕业审核</NavLink>
+              <NavLink to="/CourseVerify">选课报考校验</NavLink>
             </Button>
             <Button asChild variant="ghost" size="sm" className="text-base">
               <NavLink to="/help">帮助</NavLink>

@@ -25,7 +25,7 @@ function HelpPage() {
               <NavLink to="/course">生成选课表</NavLink>
             </Button>
             <Button asChild variant="ghost" size="sm" className="text-base">
-              <NavLink to="/graduation">毕业审核</NavLink>
+              <NavLink to="/CourseVerify">选课报考校验</NavLink>
             </Button>
             <Button asChild variant="ghost" size="sm" className="text-base">
               <NavLink to="/help">帮助</NavLink>
@@ -87,40 +87,6 @@ function HelpPage() {
             </div>
 
             {/* 毕业条件自查 */}
-            <div className="bg-card border rounded-lg p-6 shadow-sm">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="rounded-md bg-muted/60 p-2">
-                  <CheckCircle className="h-6 w-6 text-foreground" />
-                </div>
-                <div className="flex-1">
-                  <h4 className="text-lg font-semibold">毕业条件自查</h4>
-                  <p className="text-sm text-muted-foreground mt-1">
-                    毕业前检查学生是否符合毕业条件。
-                  </p>
-                </div>
-              </div>
-              <div className="space-y-3">
-                <div>
-                  <h5 className="text-base font-medium">使用步骤</h5>
-                  <ol className="text-sm text-muted-foreground mt-2 space-y-1 ml-4 list-decimal">
-                    <li>进入毕业审核页面</li>
-                    <li>输入或导入学生的基本信息（学号、姓名、专业等）</li>
-                    <li>系统将自动检查毕业要求，包括学分、必修课、选修课等</li>
-                    <li>查看审核结果和建议</li>
-                  </ol>
-                </div>
-                <div>
-                  <h5 className="text-base font-medium">检查内容</h5>
-                  <ul className="text-sm text-muted-foreground mt-2 space-y-1 ml-4 list-disc">
-                    <li>总学分要求</li>
-                    <li>必修课程完成情况</li>
-                    <li>选修课程学分</li>
-                    <li>实践环节要求</li>
-                    <li>其他毕业条件</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
 
             {/* 帮助与文档 */}
             <div className="bg-card border rounded-lg p-6 shadow-sm">
