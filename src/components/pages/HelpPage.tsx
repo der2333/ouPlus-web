@@ -1,11 +1,6 @@
 import { NavLink } from "react-router";
 import { Button } from "../ui/button";
-import {
-  CheckCircle,
-  FileText,
-  HelpCircle,
-  LayoutDashboard,
-} from "lucide-react";
+import { FileText, HelpCircle, LayoutDashboard } from "lucide-react";
 
 function HelpPage() {
   return (
@@ -25,7 +20,7 @@ function HelpPage() {
               <NavLink to="/course">生成选课表</NavLink>
             </Button>
             <Button asChild variant="ghost" size="sm" className="text-base">
-              <NavLink to="/CourseVerify">选课报考校验</NavLink>
+              <NavLink to="/course-verify">选课报考校验</NavLink>
             </Button>
             <Button asChild variant="ghost" size="sm" className="text-base">
               <NavLink to="/help">帮助</NavLink>

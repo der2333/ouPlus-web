@@ -1,4 +1,5 @@
 import * as XLSX from "xlsx";
+import buildXLSX from "./build-xlsx";
 
 export default async function courseSheet(file: File) {
   const arrayBuffer = await file.arrayBuffer();
@@ -47,28 +48,5 @@ export default async function courseSheet(file: File) {
     });
   });
 
-  // 创建新的工作表
-  const xuankeSheet = XLSX.utils.aoa_to_sheet(newSheetData);
-
-  // 将新工作表添加到工作簿
-  const xuankeBook = XLSX.utils.book_new();
-  XLSX.utils.book_append_sheet(xuankeBook, xuankeSheet, "学生选课名单导入");
-
-  // 将工作簿转换为二进制数据
-  const wbout: ArrayBuffer = XLSX.write(xuankeBook, {
-    bookType: "xlsx",
-    type: "array",
-  });
-  // 创建 Blob 并触发下载
-  const blob = new Blob([wbout], {
-    type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-  });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = "选课名单.xlsx"; // 设置下载文件名
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-  URL.revokeObjectURL(url);
+  buildXLSX(newSheetData, "选课名单.xlsx");
 }
