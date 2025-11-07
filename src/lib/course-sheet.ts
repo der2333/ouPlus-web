@@ -48,5 +48,5 @@ export default async function courseSheet(file: File) {
     });
   });
 
-  buildXLSX(newSheetData, "选课名单.xlsx");
+  buildXLSX(newSheetData, "选课名单.xlsx", "学生选课名单导入");
 }

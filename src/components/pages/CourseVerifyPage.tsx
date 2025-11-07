@@ -90,12 +90,12 @@ export default function CourseVerifyPage() {
       setError2("请先选择报考确认数据文件");
       return;
     }
-    // TODO: 校验逻辑
+    // [TODO]: 校验逻辑
     const missInVerify = await courseVerify(file1, file2);
     if (missInVerify.length === 0) {
       alert("校验成功，选课数据正确");
     } else {
-      buildXLSX(missInVerify, "选课报考校验缺失数据.xlsx");
+      buildXLSX(missInVerify, "选课报考校验缺失数据.xlsx", "学生选课名单导入");
     }
   };
 
@@ -130,7 +130,8 @@ export default function CourseVerifyPage() {
           <div className="rounded-xl bg-gradient-to-r from-emerald-50 to-cyan-50 p-6">
             <h2 className="text-2xl font-semibold">选课报考校验</h2>
             <p className="text-sm text-muted-foreground mt-1">
-              上传选课名单和报考确认数据进行校验。选择或拖拽文件到下面的区域。
+              上传选课名单和报考确认数据进行校验（支持 .xlsx .xls
+              .csv）。选择或拖拽文件到下面的区域。
             </p>
           </div>
         </section>

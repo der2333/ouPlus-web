@@ -1,11 +1,15 @@
 import * as XLSX from "xlsx";
 
-export default function buildXLSX(data: string[][], fileName: string) {
+export default function buildXLSX(
+  data: string[][],
+  fileName: string,
+  sheetName: string = "Sheet1",
+) {
   const sheet = XLSX.utils.aoa_to_sheet(data);
 
   // 将新工作表添加到工作簿
   const book = XLSX.utils.book_new();
-  XLSX.utils.book_append_sheet(book, sheet, "Sheet1");
+  XLSX.utils.book_append_sheet(book, sheet, sheetName);
 
   // 将工作簿转换为二进制数据
   const wbout: ArrayBuffer = XLSX.write(book, {
