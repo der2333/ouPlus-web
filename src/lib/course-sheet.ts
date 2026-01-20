@@ -11,7 +11,7 @@ export default async function courseSheet(file: File) {
 
   // 读取导入模板文件，作为表头
   const templResponse = await fetch(
-    "/src/assets/学生选课名单导入模板.xlsx",
+    "../学生选课名单导入模板.xlsx",
   );
   if (!templResponse.ok) {
     throw new Error(`error:${templResponse.status}`);
